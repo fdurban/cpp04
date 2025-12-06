@@ -14,7 +14,10 @@
 
 Brain::Brain();
 
-Brain::~Brain();
+Brain::~Brain()
+{
+
+};
 
 Brain::Brain(const Brain& other)
 {

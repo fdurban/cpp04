@@ -1,4 +1,4 @@
-NAME = polymorphism
+NAME = idontwanttosettheworldonfire
 
 CPP = c++
 
@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
 OBJS = $(SRC:.cpp=.o)
 

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
+
 #include <iostream>
 
 class Animal
@@ -25,3 +28,6 @@ class Animal
 		void	setType(std::string type);
 		std::string	getType() const;
 };
+
+#endif
+

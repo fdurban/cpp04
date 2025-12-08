@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
+
 class Brain
 {
 	private:
@@ -19,6 +22,8 @@ class Brain
 		~Brain();
 		Brain(const Brain& other);
 		Brain&	operator=(const Brain& other);
-		const	std::string	getIdeas();
-		void			setideas();
-}
+		const	std::string	getIdeas(int i);
+		void			setIdeas();
+};
+
+#endif

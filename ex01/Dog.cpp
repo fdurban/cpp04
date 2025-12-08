@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-
+#include "Brain.hpp"
 
 Dog::Dog(): Animal()
 {
@@ -21,7 +21,9 @@ Dog::Dog(): Animal()
 Dog::Dog(const Dog& other): Animal(other)
 {
 	std::cout<<"Dog copy constructor called"<<std::endl;
-	*this = other;
+	this->type = other.type;
+	delete this->dogbrain;
+	this->dogbrain = new Brain(*other.dogbrain);
 }
 
 Dog&	Dog::operator=(const Dog& other)

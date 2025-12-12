@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 13:14:23 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/10 13:25:58 by fdurban-         ###   ########.fr       */
+/*   Created: 2025/12/10 12:42:20 by fdurban-          #+#    #+#             */
+/*   Updated: 2025/12/10 13:13:50 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "ICharacter.hpp"
+
+Character::Character()
 {
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	ICharacter* me = new Character("me");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
-	delete bob;
-	delete me;
-	delete src;
-	return 0;
+	std::cout<<"Character default constructor called"<<std::endl;
 }
+

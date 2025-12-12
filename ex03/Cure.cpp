@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:49:47 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/09 15:51:47 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/12/10 13:01:45 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,12 @@ Cure::~Cure()
 	std::ccout<<"Defaut Cure destructor called"
 }
 
+AMateria*→      Cure::clone()
+{
+→       return (new Cure(*this));
+}
+
+void→   Cure::use(ICharacter& target)
+{
+→       std::cout<<"Shoots an ice ball at"<<target->name<<std::endl;
+}

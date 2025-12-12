@@ -1,10 +1,15 @@
+#include "ICharacter.hpp"
+#include "AMAteria.hpp"
+
 class Cure : public AMateria
 {
-	public:
-		
 	private:
+		
+	public:
 		Cure();
 		~Cure();
 		Cure(const Cure &copy);
 		Cure &operator=(const Cure &copy);
+		AMateria*	clone();
+		void		use(ICharacter& target);
 }

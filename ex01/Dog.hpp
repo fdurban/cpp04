@@ -16,11 +16,13 @@
 class Dog : public Animal
 {
 	private:
-		Brain	*dogbrain;
+		Brain	*dogBrain;
 	public:
 		Dog();
 		~Dog();
 		Dog(const Dog &other);
 		Dog&	operator=(const Dog& other);
 		void	makeSound() const;
+		Brain	*getBrain(void) const;
+		const std::string getIdeas(unsigned int) const;
 };

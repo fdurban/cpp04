@@ -14,6 +14,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -21,12 +22,13 @@ class Animal
 		std::string	type;
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		Animal(const Animal &other);
 		Animal&	operator=(const Animal& other);
 		virtual void	makeSound() const;
 		void	setType(std::string type);
 		std::string	getType() const;
+		virtual Brain*	getBrain() const;
 };
 
 #endif

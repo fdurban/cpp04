@@ -1,4 +1,4 @@
-NAME = idontwanttosettheworldonfire
+NAME = abstractclass
 
 CPP = c++
 

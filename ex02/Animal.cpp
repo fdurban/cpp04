@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+	setType("Default Animal");
 	std::cout<<"Animal default connstructor called"<<std::endl;
 }
 
@@ -49,4 +50,8 @@ void		Animal::setType(std::string type)
 std::string	Animal::getType() const
 {
 	return (this->type);
+}
+
+Brain	*Animal::getBrain() const {
+	return (0);
 }

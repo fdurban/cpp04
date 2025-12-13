@@ -24,8 +24,7 @@ Cat::Cat(const Cat& other): Animal(other)
 {
 	std::cout<<"Cat Class Copy constructor called"<<std::endl;
 	this->type = other.type;
-	delete this->catbrain;
-	this->catbrain = new Brain(*other.catbrain);
+	this->catBrain = new Brain(*other.catBrain);
 }
 
 Cat&	Cat::operator=(const Cat& other)
@@ -35,7 +34,7 @@ Cat&	Cat::operator=(const Cat& other)
 		return (*this);
 	this->type = other.type;
 	delete	this->catBrain;
-	this->catBrain = new Brain(*other.brainCat);
+	this->catBrain = new Brain(*other.catBrain);
 	return (*this);
 }
 

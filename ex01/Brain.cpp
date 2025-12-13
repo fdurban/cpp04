@@ -14,7 +14,7 @@
 #include "Brain.hpp"
 Brain::Brain()
 {
-	std::cout<<"Brain Class Default constructor called"<<std::endl:
+	std::cout<<"Brain Class Default constructor called"<<std::endl;
 	setIdeas();
 }
 

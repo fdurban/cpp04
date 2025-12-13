@@ -14,15 +14,18 @@
 #include "Brain.hpp"
 Brain::Brain()
 {
+	std::cout<<"Brain Class Default constructor called"<<std::endl;
+	setIdeas();
 }
 
 Brain::~Brain()
 {
-
+	std::cout<<"Brain Class Destructor called"<<std::endl;
 }
 
 Brain::Brain(const Brain& other)
 {
+	std::cout<<"Brain class copy constructor called"<<std::endl;
 	*this = other;
 }
 
@@ -37,6 +40,11 @@ Brain&	Brain::operator=(const Brain& other)
 
 const std::string	Brain::getIdeas(int i)
 {
+	if(i >= 100 || i < 0)
+	{
+		std::cout<<"Wrong idea index"<<std::endl;
+		return (0);
+	}
 	return (this->ideas[i]);
 }
 
@@ -44,6 +52,6 @@ void	Brain::setIdeas()
 {
 	for(int i= 0; i < 100; i++)
 	{
-		this->ideas[i] = "Let's eat the same food fot the th time";
+		this->ideas[i] = "Let's eat the same food again!!";
 	}
 }

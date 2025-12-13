@@ -14,7 +14,8 @@
 
 Animal::Animal()
 {
-	std::cout<<"Animal default connstructor called"<<std::endl;
+	this->type = "Defaul Animal";
+	std::cout<<"Animal Default constructor called"<<std::endl;
 }
 
 Animal::Animal(const Animal& other)

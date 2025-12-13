@@ -15,6 +15,7 @@
 
 Dog::Dog(): Animal()
 {
+	Animal::setType("Dog");
 	std::cout<<"Default dog constructor called"<<std::endl;
 }
 

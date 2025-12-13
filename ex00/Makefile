@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS = $(SRC:.cpp=.o)
 

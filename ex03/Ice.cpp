@@ -14,7 +14,7 @@
 
 Ice::Ice(): AMateria("ice")
 {
-	std::cout<<"Default cconstructor called"<<std::endl;
+	std::cout<<"Default constructor Ice called"<<std::endl;
 }
 
 Ice::Ice(const Ice &copy): AMateria(copy)

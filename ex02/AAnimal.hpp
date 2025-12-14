@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 #include "Brain.hpp"
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string	type;
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal &other);
-		Animal&	operator=(const Animal& other);
+		AAnimal();
+		virtual ~AAnimal();
+		AAnimal(const AAnimal &other);
+		AAnimal&	operator=(const AAnimal& other);
 		virtual void	makeSound() const = 0;
 		void	setType(std::string type);
 		std::string	getType() const;

@@ -44,3 +44,8 @@ std::string const	&AMateria::getType(void) const
 {
 	return (this->type);
 }
+
+void AMateria::use(ICharacter& target)
+{
+std::cout<<"* uses unknown type"<<getType()<<"against target"<<target.getName()<<std::endl;
+}

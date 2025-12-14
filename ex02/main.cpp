@@ -18,7 +18,7 @@
 
 int		main(void)
 {
-	const Animal	*dogAndCat[ANIMAL_SIZE]; // DECLARING 2 ANIMALS
+	const AAnimal	*dogAndCat[ANIMAL_SIZE]; // DECLARING 2 ANIMALS
 
 	std::cout << std::endl;
 	for (int i = 0; i < ANIMAL_SIZE; i++) { // INIT THE ANIMALS TO BE CAT AND DOG
@@ -56,7 +56,7 @@ int		main(void)
 	}
 	std::cout << std::endl;
 
-	
+
 	//DEEP COPY OF ANIMALS using copy constructor
 	std::cout << std::endl;
 	Dog	*dogA = new Dog;

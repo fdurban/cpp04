@@ -14,7 +14,7 @@
 
 Cure::Cure(): AMateria("cure")
 {
-	std::cout<<"Default cconstructor called"<<std::endl;
+	std::cout<<"Default constructor cure called"<<std::endl;
 }
 
 Cure::Cure(const Cure &copy): AMateria(copy)
@@ -38,10 +38,10 @@ Cure::~Cure()
 
 AMateria*→      Cure::clone()
 {
-→       return (new Cure(*this));
+	return (new Cure(*this));
 }
 
 void→   Cure::use(ICharacter& target)
 {
-→       std::cout<<"Shoots an ice ball at"<<target->name<<std::endl;
+	std::cout<<"* heals "<<target->name<<"'s wounds *"<<std::endl;
 }

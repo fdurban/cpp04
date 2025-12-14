@@ -5,6 +5,7 @@ class Character: public ICharacter
 {
 	private:
 		AMateria	*inventory[4];
+		AMateria	*learntMateria[4];
 		std::string	name;
 	public:
 		Character();

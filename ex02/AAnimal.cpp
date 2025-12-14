@@ -10,48 +10,48 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
-	setType("Default Animal");
-	std::cout<<"Animal default connstructor called"<<std::endl;
+	setType("Default AAnimal");
+	std::cout<<"AAnimal default connstructor called"<<std::endl;
 }
 
-Animal::Animal(const Animal& other)
+AAnimal::AAnimal(const AAnimal& other)
 {
-	std::cout<<"Animal copy constructor called"<<std::endl;
+	std::cout<<"AAnimal copy constructor called"<<std::endl;
 	*this = other;
 }
 
-Animal& Animal::operator=(const Animal& other)
+AAnimal& AAnimal::operator=(const AAnimal& other)
 {
-	std::cout<<"Animal assignment operator called"<<std::endl;
+	std::cout<<"AAnimal assignment operator called"<<std::endl;
 	if(this == &other)
 		return (*this);
 	this->type = other.type;
 	return (*this);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout<<"Animal destructor called"<<std::endl;
+	std::cout<<"AAnimal destructor called"<<std::endl;
 }
 
-void	Animal::makeSound() const
+void	AAnimal::makeSound() const
 {
 	std::cout<<"?????"<<std::endl;
 }
 
-void		Animal::setType(std::string type)
+void		AAnimal::setType(std::string type)
 {
 	this->type = type;
 }
-std::string	Animal::getType() const
+std::string	AAnimal::getType() const
 {
 	return (this->type);
 }
 
-Brain	*Animal::getBrain() const {
+Brain	*AAnimal::getBrain() const {
 	return (0);
 }

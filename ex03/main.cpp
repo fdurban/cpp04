@@ -6,10 +6,13 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:14:23 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/10 13:25:58 by fdurban-         ###   ########.fr       */
+/*   Updated: 2026/01/07 17:09:35 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
 int main()
 {
 	IMateriaSource* src = new MateriaSource();

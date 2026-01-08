@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:49:47 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/10 13:01:45 by fdurban-         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:38:32 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ Cure&	Cure::operator=(const Cure &copy)
 
 Cure::~Cure()
 {
-	std::ccout<<"Defaut Cure destructor called"
+	std::cout<<"Defaut Cure destructor called"<<std::endl;
 }
 
-AMateria*→      Cure::clone()
+AMateria*      Cure::clone() const
 {
 	return (new Cure(*this));
 }
 
-void→   Cure::use(ICharacter& target)
+void	Cure::use(ICharacter& target)
 {
-	std::cout<<"* heals "<<target->name<<"'s wounds *"<<std::endl;
+	std::cout<<"* heals "<<target.getName()<<"'s wounds *"<<std::endl;
 }

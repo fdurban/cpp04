@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 14:55:05 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/10 13:01:05 by fdurban-         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:40:07 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ Ice&	Ice::operator=(const Ice &copy)
 
 Ice::~Ice()
 {
-	std::ccout<<"Defaut Ice destructor called"<<std::endl;
+	std::cout<<"Defaut Ice destructor called"<<std::endl;
 }
 
-AMateria*	Ice::clone()
+AMateria*	Ice::clone() const
 {
 	return (new Ice(*this));
 }
 
 void	Ice::use(ICharacter& target)
 {
-	std::cout<<"Shoots an ice ball at"<<target->name<<std::endl;
+	std::cout<<"Shoots an ice ball at"<<target.getName()<<std::endl;
 }

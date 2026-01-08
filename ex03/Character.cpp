@@ -6,11 +6,11 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 12:42:20 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/12/10 13:13:50 by fdurban-         ###   ########.fr       */
+/*   Updated: 2026/01/08 15:44:50 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include "Character.hpp"
 
 Character::Character()
 {
@@ -25,7 +25,7 @@ Character::Character(std::string namex)
 		inventory[i] = NULL;
 		learntMateria[i] = NULL;
 	}
-	std::cout<<"Character parametrized constructor called"<<std::endl
+	std::cout<<"Character parametrized constructor called"<<std::endl;
 }
 
 Character::~Character()
@@ -53,7 +53,11 @@ Character::Character(const Character &copy)
 		else
 			this->inventory[i] = NULL;
 	}
-	return (*this);
+}
+
+std::string	const &Character::getName() const
+{
+	return (this->name);
 }
 
 void	Character::equip(AMateria *m)

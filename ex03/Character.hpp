@@ -1,5 +1,5 @@
-#include "Character.hpp"
-#include "AMAteria.hpp"
+#include "ICharacter.hpp"
+#include "MateriaSource.hpp"
 
 class Character: public ICharacter
 {
@@ -13,7 +13,7 @@ class Character: public ICharacter
 		~Character();
 
 		Character(const Character &copy);
-		Charcater&	operator=(const Character &copy);
+		Character&	operator=(const Character &copy);
 		std::string const	&getName() const;
 		void		equip(AMateria *m);
 		void		unequip(int idx);

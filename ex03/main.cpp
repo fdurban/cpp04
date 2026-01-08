@@ -6,13 +6,16 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 13:14:23 by fdurban-          #+#    #+#             */
-/*   Updated: 2026/01/07 17:09:35 by fdurban-         ###   ########.fr       */
+/*   Updated: 2026/01/07 22:33:05 by fernando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 int main()
 {
 	IMateriaSource* src = new MateriaSource();

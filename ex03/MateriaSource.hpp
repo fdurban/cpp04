@@ -1,4 +1,4 @@
-#include "IMateria.hpp"
+#include "IMateriaSource.hpp"
 
 class MateriaSource: public IMateriaSource
 {
@@ -9,6 +9,6 @@ class MateriaSource: public IMateriaSource
 	MateriaSource(MateriaSource &copy);
 	~MateriaSource();
 	MateriaSource const &operator=(MateriaSource const &copy);
-	void	learnMateria(AMateria*);
+	void	learnMateria(AMateria* materia);
 	AMateria	*createMateria(std::string const &type);
-}
+};

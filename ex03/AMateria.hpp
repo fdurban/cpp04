@@ -2,7 +2,7 @@
 #define AMATERIA_HPP
 
 #include <iostream>
-#include "ICharacter.hpp"
+#include "Character.hpp"
 
 class AMateria
 {
@@ -13,7 +13,7 @@ class AMateria
 		AMateria(AMateria const &copy);
 		AMateria(std::string const & type);
 		virtual ~AMateria();
-		std::string const & getType() const; //Returns the materia type
+		std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 };

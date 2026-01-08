@@ -1,5 +1,5 @@
 #include "ICharacter.hpp"
-#include "AMAteria.hpp"
+#include "AMateria.hpp"
 
 class Cure : public AMateria
 {
@@ -12,4 +12,4 @@ class Cure : public AMateria
 		Cure &operator=(const Cure &copy);
 		AMateria*	clone();
 		void		use(ICharacter& target);
-}
+};

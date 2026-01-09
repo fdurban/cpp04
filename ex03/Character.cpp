@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Character.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 12:42:20 by fdurban-          #+#    #+#             */
-/*   Updated: 2026/01/08 15:44:50 by fdurban-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Character.hpp"
 
 Character::Character()
@@ -69,6 +57,7 @@ void	Character::equip(AMateria *m)
 		if(this->inventory[i] == NULL)
 		{
 			this->inventory[i] = m;
+			std::cout<<this->name<<" equips materia of type "<<m->getType()<<" in posiiton "<<i<<std::endl;
 			return;
 		}
 	}
@@ -76,8 +65,13 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
+	if(idx < 0 || idx >= 4)
+	{
+		std::cout<<"Unequip: Non existent slot"<<std::endl;
+	}
 	if(this->inventory[idx] != NULL)
 	{
+		this->learntMateria[idx] = this->inventory[idx];
 		this->inventory[idx] = NULL;
 	}
 	else
@@ -86,6 +80,11 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter &target)
 {
+	if(idx < 0 || idx >= 4)
+	{
+		std::cout<<"Use: Non existen slot"<<std::endl;
+		return ;
+	}
 	if(this->inventory[idx] != NULL)
 		this->inventory[idx]->use(target);
 	else
